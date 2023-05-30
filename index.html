@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Hoe lang heeft Redux al niks gezegd?</title>
+    </head>
+    <body>
+        <p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </p>
+        <h3 class="centered_text">Hoe lang heeft Redux al niks gezegd?</h2>
+        <section>
+            <h1 id="time" class="centered_text"></h1>
+        </section>
+        <p class="centered_text">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><i>Redux, kom verdomme met een statement!</i>
+        </p>
+        <script>
+            var countDownDate = new Date("May 23, 2023 12:00:00").getTime();
+            
+            var x = setInterval(function() {
+            
+              var now = new Date().getTime();
+                
+              var distance = countDownDate - now;
+                
+              var days = Math.floor(distance / (-1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (-1000 * 60 * 60 * 24)) / (-1000 * 60 * 60));
+              var minutes = Math.floor((distance % (-1000 * 60 * 60)) / (-1000 * 60));
+              var seconds = Math.floor((distance % (-1000 * 60)) / -1000);
+              let dagen = null;
+              let uren = hours + " uur, ";
+              let minuten = null;
+              let seconden = null;
+              if (days == 1){
+                dagen = days + " dag, "
+              }
+              else{
+                dagen = days + " dagen, ";
+              }
+              if (minutes == 1){
+                minuten = minutes + " minuut en "
+              }
+              else{
+                minuten = minutes + " minuten en ";
+              }
+              if (seconds == 1){
+                seconden = seconds + " seconde."
+              }
+              else{
+                seconden = seconds + " seconden.";
+              }
+              let final = dagen + uren + minuten + seconden;
+                
+              document.getElementById("time").innerHTML = final;
+                
+            }, 1000);
+            </script>
+    </body>
+</html>
