@@ -18,6 +18,10 @@ html{
     text-align: center;
 }
 
+.left_text{
+    text-align: left;
+}
+
 .red_bar{
     text-align: center;
     background-color: red;
